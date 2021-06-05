@@ -1,5 +1,9 @@
-$(document).ready(function() {
-    $('.glazing_slider').slick({
+import $ from 'jquery';
+import 'slick-carousel';
+
+
+$(() => {
+    $('.glazing_slider').not('.slick-initialized').slick({
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -37,7 +41,7 @@ $(document).ready(function() {
             }
         }]
     });
-    $('.decoration_slider').slick({
+    $('.decoration_slider').not('.slick-initialized').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -67,4 +71,4 @@ $(document).ready(function() {
             }
         }]
     });
-});   
+});
