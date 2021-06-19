@@ -27,6 +27,7 @@ const images = () => {
 
         if (target && target.classList.contains('preview')) {
             imgPopup.style.display = 'flex';
+            imgPopup.classList.add('faded');
             document.body.style.overflow = 'hidden';
             const path = target.parentNode.getAttribute('href');
             bigImage.setAttribute('src', path);
@@ -34,6 +35,7 @@ const images = () => {
 
         if (target && target.matches('div.popup')) {
             imgPopup.style.display = 'none';
+            imgPopup.classList.remove('faded');
             document.body.style.overflow = '';
         }
     });

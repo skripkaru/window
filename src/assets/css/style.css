@@ -18,6 +18,21 @@ body {
   color: red;
 }
 
+.faded {
+    animation-name: faded;
+    animation-duration: 1s;
+}
+
+@keyframes faded {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -691,7 +706,6 @@ textarea:focus {
   color: black;
   border-radius: 10px;
   text-align: center;
-  width: 360px;
   height: 150px;
 }
 
@@ -701,10 +715,14 @@ textarea:focus {
 }
 .numbers1 {
   display: block;
-  float: left;  
+  float: left;
   color: white;
   font-size: 40px;
   margin-right: 10px;
+}
+
+.numbers1:last-child {
+    margin-right: 0;
 }
 
 .timer1 span{
@@ -1802,6 +1820,11 @@ textarea:focus {
   .popup_calc_profile_button {
     padding: 1rem 5rem;
   }
+
+  .numbers1 {
+      font-size: 28px;
+  }
+
 }
 
 /* small devices, tablets */
