@@ -10,6 +10,15 @@ const changeModalState = (state) => {
     checkNumInputs('#width');
     checkNumInputs('#height');
 
+    function disabledButtons(selector) {
+        const btns = document.querySelectorAll(selector);
+        btns.forEach(btn => {
+            btn.disabled = true;
+        });
+    }
+    disabledButtons('[data-next]');
+
+
 
     function bindActionToElems(event, elem, prop) {
         elem.forEach((item, i) => {
