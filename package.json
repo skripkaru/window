@@ -15,7 +15,7 @@
     "watch": "webpack --mode development --config webpack.dev.js --watch",
     "prod": "webpack --mode production --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js",
-    "predeploy": "npm run build",
+    "predeploy": "npm run prod",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
